@@ -1,0 +1,13 @@
+// This file applies globally in the website
+
+a {
+  transition: all 0.25s ease;
+  color: #ff3392;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: all 0.25s ease;
+      // transform: scale(1.025);
+      letter-spacing: 0.5px;
+    }
+  }
+}
