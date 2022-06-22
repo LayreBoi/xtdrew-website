@@ -103,6 +103,7 @@ xtdrew-dimbackground {
         transform: translateY(0);
         // visibility: visible;
       }
+
       opacity: 1;
       transform: scale(1);
     }
@@ -185,10 +186,13 @@ xtdrew-dimbackground {
         flex-direction: column;
         position: relative;
         gap: 20px;
+
         xtdrew-w-p-desc {
           font-size: 20px;
         }
+
         width: 100%;
+
         xtdrew-w-p-meta {
           font-size: 20px;
           width: calc(100% - 26px);
@@ -256,6 +260,7 @@ xtdrew-dimbackground {
             size: cover;
             color: #eee;
           }
+
           border-radius: 18px;
         }
 
@@ -294,6 +299,7 @@ xtdrew-dimbackground {
               letter-spacing: 5px;
             }
           }
+
           &:active {
             transition: all 0.25s ease;
             transform: scale(1.025);
@@ -347,12 +353,9 @@ export default defineComponent({
     },
     closeWindow(): void {
       this.showWindow = false;
-      this.timeout = setTimeout(
-        () => {
-          this.project = xtdrew.exampleProject;
-        },
-        1000
-      );
+      this.timeout = setTimeout(() => {
+        this.project = xtdrew.exampleProject;
+      }, 1000);
       EvMgmt.emit("closeProject");
       this.changeScrollMode(true);
     },
