@@ -26,10 +26,12 @@ xtdrew-section {
 
   xtdrew-welcome {
     text-align: center;
+    color: var(--xtdrew-dark1);
 
     svg {
       height: 70px;
       width: auto;
+      fill: var(--xtdrew-dark1);
     }
 
     @media screen and (max-width: 770px) {

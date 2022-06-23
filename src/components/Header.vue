@@ -138,6 +138,7 @@ xtdrew-header {
 
     xtdrew-nav {
       transition: all 0.25s ease;
+      color: var(--xtdrew-dark1);
 
       @media (hover: hover) and (pointer: fine) {
         &.discord a:hover {
@@ -178,7 +179,7 @@ xtdrew-header {
         }
 
         a:hover {
-          background-color: var(--xtdrew-light2);
+          background-color: var(--xtdrew-nav-bg);
         }
       }
 
@@ -252,6 +253,8 @@ xtdrew-header {
 
     @media (hover: hover) and (pointer: fine) {
       xtdrew-nav {
+        color: var(--xtdrew-dark1);
+
         &.discord a:hover {
           background-color: #5865f2;
           color: white;
@@ -290,7 +293,7 @@ xtdrew-header {
         }
 
         a:hover {
-          background-color: var(--xtdrew-light2);
+          background-color: var(--xtdrew-nav-bg);
           transition: all 0.25s ease;
         }
       }
@@ -299,6 +302,7 @@ xtdrew-header {
     xtdrew-logo {
       a {
         transition: all 0.25s ease;
+        fill: var(--xtdrew-dark1);
         @media (hover: hover) and (pointer: fine) {
           &:hover {
             fill: var(--xtdrew-main);

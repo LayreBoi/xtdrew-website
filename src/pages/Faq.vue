@@ -32,6 +32,7 @@
 
 <style scoped lang="scss">
 xtdrew-faq {
+  color: var(--xtdrew-dark1);
   align-items: center;
   xtdrew-title {
     display: flex;
@@ -46,6 +47,7 @@ xtdrew-faq {
     svg {
       height: 100px;
       width: auto;
+      fill: var(--xtdrew-faq-title);
 
       @media screen and (max-width: 770px) {
         & {
@@ -86,7 +88,7 @@ xtdrew-faq {
 
       padding: 25px 0;
       border: {
-        color: black;
+        color: var(--xtdrew-dark1);
         width: 2px;
         style: solid;
         radius: 18px;

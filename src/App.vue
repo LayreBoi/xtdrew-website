@@ -119,6 +119,7 @@ body::-webkit-scrollbar-thumb {
 body {
   height: 100vh;
   overflow: overlay;
+  background-color: var(--xtdrew-light1);
   xtdrew-app {
     width: 100%;
     // min-height: 100vh;

@@ -1,13 +1,19 @@
 xtdrew-section {
   background-color: var(--xtdrew-light2);
+  color: var(--xtdrew-dark1);
+
+  xtdrew-conts xtdrew-title svg {
+    fill: var(--xtdrew-section-titles);
+  }
+
   &.black {
-    background-color: var(--xtdrew-dark2);
-    color: white;
+    background-color: var(--xtdrew-contact-bg);
+    color: var(--xtdrew-contact-fg);
 
     xtdrew-conts {
       xtdrew-title {
         svg {
-          fill: var(--xtdrew-light1);
+          fill: var(--xtdrew-contact-tl);
         }
       }
     }
@@ -16,7 +22,7 @@ xtdrew-section {
   // for noscript page
   &.noscript {
     background-color: var(--color-red);
-    color: white;
+    color: var(--xtdrew-light1);
   }
 
   xtdrew-conts {

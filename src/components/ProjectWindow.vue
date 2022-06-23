@@ -83,7 +83,7 @@ xtdrew-dimbackground {
   xtdrew-window {
     display: flex;
     flex-direction: column;
-    background-color: var(--xtdrew-light1);
+    background-color: var(--xtdrew-project-bg);
     width: calc(85% - 40px);
     height: calc(85% - 60px);
     transition: all 0.25s ease;
@@ -126,6 +126,7 @@ xtdrew-dimbackground {
 
       xtdrew-w-name {
         font-size: 30px;
+        color: var(--xtdrew-project-title);
 
         @media screen and (max-width: 500px) {
           font-size: 20px;
@@ -135,6 +136,7 @@ xtdrew-dimbackground {
       svg {
         height: 60px;
         width: auto;
+        fill: var(--xtdrew-project-title);
       }
 
       @media screen and (max-width: 770px) {
@@ -186,6 +188,7 @@ xtdrew-dimbackground {
         flex-direction: column;
         position: relative;
         gap: 20px;
+        color: var(--xtdrew-dark1);
 
         xtdrew-w-p-desc {
           font-size: 20px;
@@ -282,7 +285,7 @@ xtdrew-dimbackground {
           align-items: center;
           justify-content: center;
           text-decoration: none;
-          color: black;
+          color: var(--xtdrew-dark1);
           border: 4px solid var(--xtdrew-light2);
           border-radius: 18px;
           font-size: 20px;
