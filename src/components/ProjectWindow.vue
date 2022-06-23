@@ -393,7 +393,7 @@ export default defineComponent({
     createProjectLink(project: Project) {
       const urlname = project.name.toLowerCase().replaceAll(" ", "-");
       const link = `${
-        xtdrew.getDevEnvironment() ? "http://localhost" : "https://xtdrew.xyz"
+        xtdrew.getDevEnvironment() ? "http://localhost" : /*"https://xtdrew.xyz"*/ "https://newxtdrew-7646.pages.dev"
       }/?p=${urlname}`;
       return useClipboard({
         source: link,
