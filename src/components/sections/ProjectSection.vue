@@ -21,6 +21,7 @@
           v-for="prj of projects"
           :key="prj.name"
           :style="`--cover: url('${prj.cover}')`"
+          :title="prj.name"
           v-on:click="openProject(prj)"
         />
       </xtdrew-prjlist>
@@ -57,8 +58,6 @@ export default defineComponent({
             this.openProject(this.projects[i]);
           }
         }
-
-        this.$router.replace({ query: { param: [] } });
       }
     }, 250);
   },
@@ -91,7 +90,7 @@ xtdrew-section {
         border-radius: 9px;
         transition: all 0.25s ease;
         background: {
-          color: #eee;
+          color: var(--xtdrew-light2);
           image: var(--cover);
           size: cover;
         }
@@ -99,7 +98,7 @@ xtdrew-section {
         &:hover {
           transition: all 0.25s ease;
           transform: translateY(-5px);
-          box-shadow: 0px 5px 0px #00000033;
+          box-shadow: 0px 5px 0px var(--xtdrew-project-sd);
         }
       }
     }

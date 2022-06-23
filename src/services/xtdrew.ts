@@ -5,12 +5,19 @@ class xtdrew {
 
   public isInFAQ: boolean = false;
 
+  public isClosingProject: boolean = false;
+
   public checkMobile(width: number): void {
     this.isMobile = width < 720;
   }
 
   public getWebName(): string {
     return `${this.webname} `;
+  }
+
+  public closeProject(): void {
+    this.isClosingProject = true;
+    setTimeout(() => this.isClosingProject = false, 250);
   }
 
   public getDevEnvironment(): boolean {
@@ -49,6 +56,7 @@ class xtdrew {
       name: "LAYRE.LOL Linktree",
       description: [
         "LΛYRΞ.LOL Linktree is a website where you can find me in any social media like YouTube, Twitter, Instagram, etc.",
+        "(You can also visit this website by clicking on \"Socials\" in the navigation above)"
       ],
       type: "Website",
       lang: "Vue-TS",

@@ -8,7 +8,7 @@
           title="Website repository in GitHub"
           >GitHub</a
         >
-        <span style="color: #ff3392;" v-html="dev ? ' // DEVELOPMENT BUILD' : ''"></span>
+        <span style="color: var(--color-yellow)" v-html="devfoot"></span>
       </xtdrew-f>
     </xtdrew-text>
   </xtdrew-footer>
@@ -20,8 +20,8 @@ xtdrew-footer {
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: #171717;
-  color: white;
+  background-color: var(--xtdrew-footer-bg);
+  color: var(--xtdrew-footer-fg);
   transition: all 0.2s ease;
 
   //   position: absolute;
@@ -44,9 +44,9 @@ xtdrew-footer {
     xtdrew-f {
       display: block;
       a {
-        color: white;
+        color: var(--xtdrew-footer-fg);
         &:visited {
-          color: #eee;
+          color: var(--xtdrew-footer-lk);
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -54,7 +54,7 @@ xtdrew-footer {
           &:hover {
             transition: all 0.25s ease;
             transform: translateY(-2px);
-            color: #eaeaea;
+            color: var(--xtdrew-footer-lv);
           }
         }
       }
@@ -66,4 +66,7 @@ xtdrew-footer {
 <script setup lang="ts">
 import xtdrew from "../services/xtdrew";
 const dev: boolean = xtdrew.getDevEnvironment();
+const devfoot: string = dev
+  ? ` // <span style="color: var(--color-red); font-weight: bolder;">DEVELOPMENT</span> BUILD`
+  : "";
 </script>

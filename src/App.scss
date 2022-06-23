@@ -2,7 +2,7 @@
 
 a {
   transition: all 0.25s ease;
-  color: #ff3392;
+  color: var(--xtdrew-main);
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       transition: all 0.25s ease;

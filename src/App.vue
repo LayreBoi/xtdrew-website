@@ -81,8 +81,7 @@ export default defineComponent({
       "font-size: 32px; font-weight: bolder; color: #ff3392"
     );
     console.log(
-      `%cWhat's up, curious developer? I've noticed you've opened the developer tools. If you're curious about how this website is made, you can check out in my open-source repository at https://github.com/layreboi/xthedrew-website`,
-      "color: #171717"
+      `What's up, curious developer? I've noticed you've opened the developer tools. If you're curious about how this website is made, you can check out in my open-source repository at https://github.com/layreboi/xthedrew-website`
     );
 
     // listen to events
@@ -111,7 +110,7 @@ body::-webkit-scrollbar-track {
   transition: all 0.25s ease;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #404040;
+  background-color: var(--xtdrew-main-scrollbar);
   border-radius: 20px;
   border: 5px solid #00000000;
   transition: all 0.25s ease;

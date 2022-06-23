@@ -1,0 +1,30 @@
+:root {
+  --color-red: #ff006a;
+  --color-green: #0fff6b;
+  --color-blue: #008cff;
+  --color-magenta: #ff2bca;
+  --color-cyan: #25fff4;
+  --color-yellow: #f7f76f;
+  --color-black: #171717;
+  --color-white: #ffffff;
+
+  --xtdrew-main: #ff3392;
+  --xtdrew-dark1: #000000;
+  --xtdrew-dark2: #171717;
+  --xtdrew-dark3: #252525;
+  --xtdrew-light1: #ffffff;
+  --xtdrew-light2: #eeeeee;
+  --xtdrew-light3: #dddddd;
+
+  --xtdrew-footer-bg: var(--xtdrew-dark2);
+  --xtdrew-footer-fg: var(--xtdrew-light1);
+  --xtdrew-footer-lv: #eaeaea; // hovered
+  --xtdrew-footer-lk: var(--xtdrew-light2);
+
+  --xtdrew-contact-bg: var(--xtdrew-dark2);
+  --xtdrew-contact-fg: var(--xtdrew-light1);
+
+  --xtdrew-project-sd: #00000033;
+
+  --xtdrew-main-scrollbar: #404040;
+}

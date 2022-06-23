@@ -83,7 +83,7 @@ xtdrew-dimbackground {
   xtdrew-window {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--xtdrew-light1);
     width: calc(85% - 40px);
     height: calc(85% - 60px);
     transition: all 0.25s ease;
@@ -169,7 +169,7 @@ xtdrew-dimbackground {
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: black;
+        background-color: var(--xtdrew-dark1);
         border-radius: 20px;
         border: 5px solid #00000000;
         transition: all 0.25s ease;
@@ -198,7 +198,7 @@ xtdrew-dimbackground {
           width: calc(100% - 26px);
           padding: 25px 13px;
           border-radius: 18px;
-          background-color: #eee;
+          background-color: var(--xtdrew-light2);
 
           @media screen and (min-width: 855px) {
             position: absolute;
@@ -211,7 +211,7 @@ xtdrew-dimbackground {
             border-radius: 4.5px;
             width: 100px;
             cursor: pointer;
-            background-color: #ddd;
+            background-color: var(--xtdrew-light3);
             text-align: center;
             margin-top: 5px;
             transition: all 0.25s ease;
@@ -258,7 +258,7 @@ xtdrew-dimbackground {
           background: {
             image: var(--image);
             size: cover;
-            color: #eee;
+            color: var(--xtdrew-light2);
           }
 
           border-radius: 18px;
@@ -275,7 +275,7 @@ xtdrew-dimbackground {
             }
           }
 
-          background-color: white;
+          background-color: var(--xtdrew-light1);
           text-align: center;
           height: 60px;
           display: flex;
@@ -283,7 +283,7 @@ xtdrew-dimbackground {
           justify-content: center;
           text-decoration: none;
           color: black;
-          border: 4px solid #eee;
+          border: 4px solid var(--xtdrew-light2);
           border-radius: 18px;
           font-size: 20px;
           transition: all 0.25s ease;
@@ -295,7 +295,7 @@ xtdrew-dimbackground {
               transform: scale(1.02);
               border: 4px solid #eeeeee00;
               border-radius: 18px;
-              background-color: #eee;
+              background-color: var(--xtdrew-light2);
               letter-spacing: 5px;
             }
           }
@@ -305,7 +305,7 @@ xtdrew-dimbackground {
             transform: scale(1.025);
             border: 4px solid #eeeeee00;
             border-radius: 18px;
-            background-color: #eee;
+            background-color: var(--xtdrew-light2);
           }
         }
       }
@@ -348,15 +348,26 @@ export default defineComponent({
 
       this.copySupported = this.createProjectLink(this.project).isSupported;
       xcont.scrollTo(0, 0);
+      this.$router.replace({
+        path: "/",
+        query: {p: this.project.name.toLowerCase().replaceAll(' ', '-')}
+      });
       this.showWindow = true;
       this.changeScrollMode(false);
     },
     closeWindow(): void {
+      xtdrew.closeProject();
       this.showWindow = false;
       this.timeout = setTimeout(() => {
         this.project = xtdrew.exampleProject;
       }, 1000);
       EvMgmt.emit("closeProject");
+
+      this.$router.replace({
+        path: "/",
+        query: { param: [] }
+      });
+
       this.changeScrollMode(true);
     },
     template(str: string = "") {

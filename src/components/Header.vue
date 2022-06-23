@@ -1,8 +1,8 @@
 <template>
   <xtdrew-header>
     <xtdrew-desktop>
-      <xtdrew-nav v-if="!mobile">
-        <a href="https://www.layre.lol/">Socials</a>
+      <xtdrew-nav v-if="!mobile" class="layrelol">
+        <a href="https://www.layre.lol/" target="_">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav v-if="!mobile">
         <a href="#" @click="scroll2Projects()">Projects</a>
@@ -25,13 +25,13 @@
       <xtdrew-nav v-if="!mobile">
         <router-link to="/faq">FAQ</router-link>
       </xtdrew-nav>
-      <xtdrew-nav v-if="!mobile">
-        <a href="https://discord.gg/rr37RqZpeZ">Discord</a>
+      <xtdrew-nav v-if="!mobile" class="discord">
+        <a href="https://discord.gg/rr37RqZpeZ" target="_">Discord</a>
       </xtdrew-nav>
     </xtdrew-desktop>
     <xtdrew-mobile v-if="mobile">
-      <xtdrew-nav>
-        <a href="https://www.layre.lol/">Socials</a>
+      <xtdrew-nav class="layrelol">
+        <a href="https://www.layre.lol/" target="_">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav>
         <a href="#" @click="scroll2Projects()">Projects</a>
@@ -39,8 +39,8 @@
       <xtdrew-nav>
         <router-link to="/faq">FAQ</router-link>
       </xtdrew-nav>
-      <xtdrew-nav>
-        <a href="https://discord.gg/rr37RqZpeZ">Discord</a>
+      <xtdrew-nav class="discord">
+        <a href="https://discord.gg/rr37RqZpeZ" target="_">Discord</a>
       </xtdrew-nav>
     </xtdrew-mobile>
   </xtdrew-header>
@@ -107,7 +107,7 @@ xtdrew-header {
   width: 100%;
   height: auto;
   align-items: center;
-  background: white;
+  background: var(--xtdrew-light1);
   z-index: 99;
 
   xtdrew-mobile {
@@ -120,7 +120,7 @@ xtdrew-header {
     a {
       -webkit-tap-highlight-color: transparent;
       text-decoration: none;
-      color: black;
+      color: var(--xtdrew-dark1);
       transition: all 0.25s ease;
       font-size: 18px;
       position: relative;
@@ -129,19 +129,56 @@ xtdrew-header {
       padding: 0px 4px;
 
       @media (hover: hover) and (pointer: fine) {
-          &:hover {
-            transition: all 0.25s ease;
-            transform: scale(1.1);
-          }
+        &:hover {
+          transition: all 0.25s ease;
+          transform: scale(1.1);
         }
+      }
     }
 
     xtdrew-nav {
       transition: all 0.25s ease;
 
       @media (hover: hover) and (pointer: fine) {
+        &.discord a:hover {
+          background-color: #5865f2;
+          color: white;
+        }
+
+        &.layrelol {
+          transition: all 0.25s ease;
+
+          a {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(95deg, #4b279b, #df99d8);
+              z-index: -1;
+              transition: opacity 0.25s ease;
+              opacity: 0;
+              border-radius: 4.5px;
+            }
+
+            &:hover {
+              background: none;
+              color: white;
+            }
+
+            &:hover::before {
+              opacity: 1;
+            }
+          }
+        }
+
         a:hover {
-          background-color: #eee;
+          background-color: var(--xtdrew-light2);
         }
       }
 
@@ -176,7 +213,7 @@ xtdrew-header {
       text-align: center;
       a {
         font-size: 20px;
-        color: black;
+        color: var(--xtdrew-dark1);
         text-decoration: none;
         transition: all 0.25s ease;
         padding: 0px 4px;
@@ -199,7 +236,6 @@ xtdrew-header {
 
         @media (hover: hover) and (pointer: fine) {
           &:hover {
-            transition: all 0.25s ease;
             transform: scale(1.1);
           }
         }
@@ -216,8 +252,45 @@ xtdrew-header {
 
     @media (hover: hover) and (pointer: fine) {
       xtdrew-nav {
+        &.discord a:hover {
+          background-color: #5865f2;
+          color: white;
+        }
+
+        &.layrelol {
+          transition: all 0.25s ease;
+
+          a {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(95deg, #4b279b, #df99d8);
+              z-index: -1;
+              transition: opacity 0.25s ease;
+              opacity: 0;
+              border-radius: 4.5px;
+            }
+
+            &:hover {
+              background: none;
+              color: white;
+            }
+
+            &:hover::before {
+              opacity: 1;
+            }
+          }
+        }
+
         a:hover {
-          background-color: #eee;
+          background-color: var(--xtdrew-light2);
           transition: all 0.25s ease;
         }
       }
@@ -225,6 +298,12 @@ xtdrew-header {
 
     xtdrew-logo {
       a {
+        transition: all 0.25s ease;
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            fill: var(--xtdrew-main);
+          }
+        }
         svg {
           width: 80px;
           height: auto;

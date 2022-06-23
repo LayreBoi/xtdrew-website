@@ -55,7 +55,8 @@ class rout3r {
 
     this.router.beforeEach((to, from, next) => {
       if (to.meta.title) document.title = xtdrew.getWebName();
-      window.scrollTo(0, 0);
+      if (!xtdrew.isClosingProject)
+        window.scrollTo(0, 0);
       next();
     });
   }

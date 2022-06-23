@@ -76,6 +76,7 @@ xtdrew-faq {
       text-align: center;
       align-items: center;
       width: 80%;
+      transition: all 0.25s ease;
 
       @media screen and (max-width: 720px) {
         & {
@@ -89,6 +90,14 @@ xtdrew-faq {
         width: 2px;
         style: solid;
         radius: 18px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          border: {
+
+          }
+        }
       }
 
       xtdrew-question {
@@ -127,7 +136,7 @@ const FAQ: Question[] = [
   {
     question: "Where did you get your name?",
     answer:
-      "I've got my name, xthedrew, from my older sister back in 2016, where she was creating an account for me in a rhythm game.",
+      "I've got my name, xthedrew, from my older sister back in 2016, where she was creating an account for me in a rhythm game. Then at the beginning of 2022, I've decided to rename to xtdrew after I bought my domain \"xtdrew.xyz\"",
   },
   {
     question: "When did you start programming?",

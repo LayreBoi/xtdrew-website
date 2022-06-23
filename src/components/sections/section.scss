@@ -1,12 +1,21 @@
 xtdrew-section {
-  background-color: #eee;
+  background-color: var(--xtdrew-light2);
   &.black {
-    background-color: #171717;
+    background-color: var(--xtdrew-dark2);
     color: white;
+
+    xtdrew-conts {
+      xtdrew-title {
+        svg {
+          fill: var(--xtdrew-light1);
+        }
+      }
+    }
   }
 
+  // for noscript page
   &.noscript {
-    background-color: #ff3392;
+    background-color: var(--color-red);
     color: white;
   }
 
