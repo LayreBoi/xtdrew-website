@@ -1,44 +1,83 @@
 <template>
   <xtdrew-error>
-    <p>
-      An error has occured when xtdrew was trying to find the page you're
-      looking for and returned the status of 404. This website is very new and
-      I'll design the 404 page l8r.
-      {{
-        ((rand) => {
-          return rand[Math.floor(Math.random() * rand.length)];
-        })([
-          "Anyways, umm, how are you today?",
-          "I wonder how Gemashy is doing...",
-          "Are you trying to predict the future or something?",
-          "Hehehehehehe...",
-          "*yaaawn*",
-          "Well this is kinda... a random moment.",
-          "Have we met each other yet?",
-          "Did you check out LayreBoi yet?",
-          "Huh, what an emptiness...",
-          "Meep.",
-          "Would you like to hear some dad jokes?",
-          ":trol:",
-        ])
-      }}
-    </p>
+    <xtdrew-e-container>
+      <xtdrew-e-img>
+        <xtdrew-e-lillie />
+        <xtdrew-e-code>404</xtdrew-e-code>
+      </xtdrew-e-img>
+      <xtdrew-e-p> Page not found </xtdrew-e-p>
+    </xtdrew-e-container>
   </xtdrew-error>
 </template>
 
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  data() {
+    return {
+      path: "/",
+    };
+  },
+  mounted() {
+    this.path = this.$route.fullPath;
+  },
+});
+</script>
+
 <style scoped lang="scss">
 xtdrew-error {
-  p {
-    margin: {
-      left: 10%;
-      right: 10%;
-    }
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  xtdrew-e-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: calc(100vh - 60px);
     @media screen and (max-width: 720px) {
       & {
-        margin: {
-          left: 5%;
-          right: 5%;
+        width: 95%;
+      }
+    }
+    xtdrew-e-img {
+      display: flex;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 27px;
+      justify-content: center;
+      align-items: center;
+      xtdrew-e-lillie {
+        width: 200px;
+        height: 200px;
+        background: {
+          image: url("https://media.discordapp.net/attachments/812779208338178101/990037385192566934/Untitled127_20220625013445.png");
+          size: cover;
+          color: #fff;
         }
+        transform: scale(1.9);
+        transition: all 0.25s ease;
+
+        box-shadow: inset 20px 20px 60px #fff, inset -20px -20px 60px #fff;
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            box-shadow: inset 20px 20px 60px #ccc, inset -20px -20px 60px #fff;
+          }
+        }
+      }
+      xtdrew-e-code {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        font-size: 30px;
+        font-weight: bolder;
       }
     }
   }
