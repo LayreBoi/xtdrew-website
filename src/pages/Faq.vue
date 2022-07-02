@@ -97,8 +97,13 @@ xtdrew-faq {
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           border: {
-
+            color: #00000000;
+            width: 2px;
+            style: solid;
+            radius: 18px;
           }
+          background-color: var(--xtdrew-light2);
+          transform: scale(1.01);
         }
       }
 
