@@ -17,7 +17,7 @@
         </svg>
       </xtdrew-title>
       <xtdrew-p>
-        Email: contact@xtdrew.xyz / contact@layreboi.me
+        Email: <a href="mailto:layreboi@mailayre.com">layreboi@mailayre.com</a>
         <br />Discord: LayreBoi_xthedrew#7646
       </xtdrew-p>
     </xtdrew-conts>
