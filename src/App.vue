@@ -88,6 +88,11 @@ export default defineComponent({
     EvMgmt.listen("openProject", (prj) => this.openWindow(prj));
     EvMgmt.listen("closeProject", () => this.closeWindow());
   },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.resize);
+    EvMgmt.stop("openProject", (prj) => this.openWindow(prj));
+    EvMgmt.listen("closeProject", () => this.closeWindow());
+  }
 });
 </script>
 
