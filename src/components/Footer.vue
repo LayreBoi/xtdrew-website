@@ -6,6 +6,7 @@
         <a
           href="https://github.com/layreboi/xtdrew-website"
           title="Website repository in GitHub"
+          target="_blank"
           >GitHub</a
         >
         <span style="color: var(--color-yellow)" v-html="devfoot"></span>

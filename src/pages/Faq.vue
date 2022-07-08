@@ -24,7 +24,7 @@
     ></xtdrew-qna-list>
     <xtdrew-info
       >If you have more questions, simply contact me by my
-      <a href="mailto:layreboi@mailayre.com" target="_">email</a> or
+      <a href="mailto:layreboi@mailayre.com" target="_blank">email</a> or
       Discord.</xtdrew-info
     >
   </xtdrew-faq>

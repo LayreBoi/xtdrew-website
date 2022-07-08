@@ -20,7 +20,7 @@
       <xtdrew-w-contents>
         <xtdrew-w-side>
           <xtdrew-w-cover :style="`--image: url(${project.cover})`" />
-          <a :href="project.link" target="_">{{ project.linkname }}</a>
+          <a :href="project.link" target="_blank">{{ project.linkname }}</a>
         </xtdrew-w-side>
         <xtdrew-w-description>
           <xtdrew-w-p-desc
@@ -393,7 +393,7 @@ export default defineComponent({
     createProjectLink(project: Project) {
       const urlname = project.name.toLowerCase().replaceAll(" ", "-");
       const link = `${
-        xtdrew.getDevEnvironment() ? "http://localhost" : /*"https://xtdrew.xyz"*/ "https://newxtdrew-7646.pages.dev"
+        xtdrew.getDevEnvironment() ? "http://localhost" : "https://xtdrew.xyz"
       }/?p=${urlname}`;
       return useClipboard({
         source: link,

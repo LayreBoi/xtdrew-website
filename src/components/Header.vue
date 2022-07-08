@@ -2,7 +2,7 @@
   <xtdrew-header>
     <xtdrew-desktop>
       <xtdrew-nav v-if="!mobile" class="layrelol">
-        <a href="https://www.layre.lol/" target="_">Socials</a>
+        <a href="https://www.layre.lol/" target="_blank">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav v-if="!mobile">
         <a href="#" @click="scroll2Projects()">Projects</a>
@@ -26,12 +26,12 @@
         <router-link to="/faq">FAQ</router-link>
       </xtdrew-nav>
       <xtdrew-nav v-if="!mobile" class="discord">
-        <a href="https://discord.gg/rr37RqZpeZ" target="_">Discord</a>
+        <a href="https://discord.gg/rr37RqZpeZ" target="_blank">Discord</a>
       </xtdrew-nav>
     </xtdrew-desktop>
     <xtdrew-mobile v-if="mobile">
       <xtdrew-nav class="layrelol">
-        <a href="https://www.layre.lol/" target="_">Socials</a>
+        <a href="https://www.layre.lol/" target="_blank">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav>
         <a href="#" @click="scroll2Projects()">Projects</a>
@@ -40,7 +40,7 @@
         <router-link to="/faq">FAQ</router-link>
       </xtdrew-nav>
       <xtdrew-nav class="discord">
-        <a href="https://discord.gg/rr37RqZpeZ" target="_">Discord</a>
+        <a href="https://discord.gg/rr37RqZpeZ" target="_blank">Discord</a>
       </xtdrew-nav>
     </xtdrew-mobile>
   </xtdrew-header>
