@@ -1,5 +1,5 @@
 <template>
-  <xtdrew-dimbackground :class="{ BackgroundDimmed: showWindow }">
+  <xtdrew-dimbackground :class="{ BackgroundDimmed: showWindow }" v-if="!destroyWindow">
     <xtdrew-closearea @click="closeWindow()" />
     <xtdrew-window :class="{ WindowVisible: showWindow }">
       <xtdrew-w-title>
@@ -20,7 +20,20 @@
       <xtdrew-w-contents>
         <xtdrew-w-side>
           <xtdrew-w-cover :style="`--image: url(${project.cover})`" />
-          <a :href="project.link" target="_blank">{{ project.linkname }}</a>
+          <xtdrew-w-a-group
+            v-if="Array.isArray(project.link) && isLinkJSON(project.link)"
+          >
+            <a
+              v-for="link in project.link"
+              key="link"
+              :href="link.link"
+              target="_blank"
+              >{{ link.name }}</a
+            >
+          </xtdrew-w-a-group>
+          <a :href="(project.link as string)" target="_blank" v-else>{{
+            project.linkname
+          }}</a>
         </xtdrew-w-side>
         <xtdrew-w-description>
           <xtdrew-w-p-desc
@@ -269,6 +282,12 @@ xtdrew-dimbackground {
 
         gap: 40px;
 
+        xtdrew-w-a-group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
         a {
           width: calc(400px - 16px);
 
@@ -330,45 +349,56 @@ export default defineComponent({
     return {
       project: xtdrew.exampleProject,
       showWindow: false,
+      destroyWindow: true,
       timeout: setTimeout(() => {}),
       shared: false,
       copySupported: true,
     };
   },
   methods: {
-    openWindow(project: Project): void {
-      const xcont = document.getElementsByTagName("xtdrew-w-contents")[0]!;
-
+    async openWindow(project: Project): Promise<void> {
       if (this.showWindow) {
         devconsole?.log("Window is already visible! Avoiding changes!");
         return;
       }
 
-      clearTimeout(this.timeout);
+      // to avoid issues of the app not finding the window, I use async
+      await (async () => {
+        return new Promise<void>((res) => {
+          this.destroyWindow = false;
+          devconsole?.log("Window has been created.");
+          res();
+        });
+      })().then(() => {
+        const xcont = document.getElementsByTagName("xtdrew-w-contents")[0]!;
+        clearTimeout(this.timeout);
 
-      devconsole?.log("Opening window...");
-      this.project = project;
+        devconsole?.log("Opening window...");
+        this.project = project;
 
-      this.copySupported = this.createProjectLink(this.project).isSupported;
-      xcont.scrollTo(0, 0);
-      this.$router.replace({
-        path: "/",
-        query: {p: this.project.name.toLowerCase().replaceAll(' ', '-')}
+        this.copySupported = this.createProjectLink(this.project).isSupported;
+        xcont.scrollTo(0, 0);
+        this.$router.replace({
+          path: "/",
+          query: { p: this.project.name.toLowerCase().replaceAll(" ", "-") },
+        });
+        this.showWindow = true;
+        this.changeScrollMode(false);
       });
-      this.showWindow = true;
-      this.changeScrollMode(false);
     },
     closeWindow(): void {
       xtdrew.closeProject();
       this.showWindow = false;
       this.timeout = setTimeout(() => {
         this.project = xtdrew.exampleProject;
+        this.destroyWindow = true;
+        devconsole?.log("Window has been destroyed.")
       }, 1000);
       EvMgmt.emit("closeProject");
 
       this.$router.replace({
         path: "/",
-        query: { param: [] }
+        query: { param: [] },
       });
 
       this.changeScrollMode(true);
@@ -432,6 +462,11 @@ export default defineComponent({
       }
 
       devconsole?.log(`Scrolling ${enabled ? "enabled" : "disabled"}!`);
+    },
+    isLinkJSON(link: string | LinkJSON[]): boolean {
+      var isit = typeof link != "string";
+      devconsole?.log(`Link is JSON equals ${isit}.`);
+      return isit;
     },
   },
   props: ["projectWatch"],

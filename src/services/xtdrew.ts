@@ -81,6 +81,27 @@ class xtdrew {
       link: "https://discord.com/api/oauth2/authorize?client_id=791269900357468200&permissions=1644971949521&scope=bot%20applications.commands",
       linkname: "Invite",
     },
+    {
+      name: "MaiLayre",
+      description: [
+        "I really wanted to have an email with a domain of my own, but I also wanna keep the email security and chose a boomer TLD (.com).",
+        "",
+        "My older emails were contact@layreboi.me and contact@xtdrew.xyz, now they forward newer message to my new email. I recommend contacting me with my latest email (layreboi@mailayre.com)."
+      ],
+      type: "Email",
+      lang: "TypeScript (Website)",
+      cover: "https://media.discordapp.net/attachments/812779208338178101/996942917597937734/Icon.png?width=400&height=400",
+      link: [
+        {
+          link: "https://mailayre.com",
+          name: "Website"
+        },
+        {
+          link: "mailto:layreboi@mailayre.com",
+          name: "Email"
+        }
+      ]
+    },
   ];
 
   /**
@@ -93,7 +114,12 @@ class xtdrew {
     cover:
       "https://media.discordapp.net/attachments/817489298450153502/942243134090399794/Untitled170_20220213031730.png?width=400&height=400",
     lang: "English",
-    link: "#",
+    link: [
+      {
+        link: "#",
+        name: "idk"
+      }
+    ],
     linkname: "Unknown",
   };
 }

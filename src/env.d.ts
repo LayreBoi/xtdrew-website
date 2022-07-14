@@ -10,7 +10,15 @@ declare module "*.vue" {
 /**
  * A URL
  */
-declare type HTTPLink = `https://${string}` | `http://${string}` | "#";
+declare type HTTPLink = `https://${string}` | `http://${string}` | "#" | `mailto:${string}@${string}`;
+
+/**
+ * If link is an array, use this
+ */
+declare type LinkJSON = {
+  link: HTTPLink;
+  name: string;
+}
 
 /**
  * A xtdrew project
@@ -49,12 +57,12 @@ declare interface Project {
   /**
    * Link to the project
    */
-  link: HTTPLink;
+  link: HTTPLink | LinkJSON[];
 
   /**
    * Name of the website the link redirects to
    */
-  linkname: string;
+  linkname?: string;
 }
 
 /**
