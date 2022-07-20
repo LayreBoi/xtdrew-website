@@ -17,7 +17,21 @@
         <p>Here are my projects you can check out:</p>
       </xtdrew-title>
       <xtdrew-prjlist>
+        <a 
+          v-if="!isClient"
+          v-for="prj of projects"
+          :key="prj.name+'-ns'"
+          :title="prj.name"
+          :href="getLink(prj)"
+          target="_blank"
+          class="xtdrew-nsa"
+        >
+          <xtdrew-project 
+            :style="`--cover: url('${prj.cover}')`"
+          />
+        </a>
         <xtdrew-project
+          v-else
           v-for="prj of projects"
           :key="prj.name"
           :style="`--cover: url('${prj.cover}')`"
@@ -34,17 +48,24 @@ import { defineComponent } from "vue";
 import xtdrew from "../../services/xtdrew";
 import Emily from "../../services/events";
 
+const isClient = typeof window !== 'undefined';
+
 export default defineComponent({
   name: "ProjectSection",
   data() {
     return {
       projects: xtdrew.projects,
+      isClient: isClient,
     };
   },
   methods: {
     openProject(project: Project) {
       Emily.emit<Project>("openProject", project);
     },
+    getLink(project: Project) {
+      var link = project.link;
+      return typeof link != "string" ? link[0].link : link
+    }
   },
   components: {},
   mounted() {
@@ -76,7 +97,13 @@ xtdrew-section {
       justify-content: space-around;
       padding-top: 40px;
 
+      .xtdrew-nsa {
+        width: 200px;
+        height: 200px;
+      }
+
       xtdrew-project {
+        display: block;
         width: 200px;
         height: 200px;
 

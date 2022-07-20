@@ -48,22 +48,24 @@ xtdrew-section {
 <script lang="ts">
 import { defineComponent } from "vue";
 
+const isClient = typeof window !== 'undefined';
+
 export default defineComponent({
   name: "TopSection",
   mounted() {
-    window.addEventListener("resize", this.updateHeight);
+    isClient && window.addEventListener("resize", this.updateHeight);
   },
   unmounted() {
-    window.removeEventListener("resize", this.updateHeight);
+    isClient && window.removeEventListener("resize", this.updateHeight);
   },
   data() {
     return {
-      devHeight: window.innerHeight,
+      devHeight: isClient ? window.innerHeight : 775,
     };
   },
   methods: {
     updateHeight(): void {
-      this.devHeight = window.innerHeight;
+      this.devHeight = isClient ? window.innerHeight : 775;
     },
   },
 });

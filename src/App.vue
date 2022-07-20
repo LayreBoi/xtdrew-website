@@ -9,6 +9,7 @@
   </xtdrew-container>
   <Footer />
   <ProjectWindow :projectWatch="currentProject" />
+  <NoScriptWarn />
 </template>
 
 <script lang="ts">
@@ -17,6 +18,7 @@ import { defineComponent } from "vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import ProjectWindow from "./components/ProjectWindow.vue";
+import NoScriptWarn from "./components/NoScriptWarn.vue";
 
 import EvMgmt from "./services/events";
 import xtdrew from "./services/xtdrew";
@@ -34,7 +36,8 @@ export default defineComponent({
     Header,
     Footer,
     ProjectWindow,
-  },
+    NoScriptWarn
+},
   data() {
     // type issues :pensive:
     const dd: WebData = {
@@ -91,7 +94,7 @@ export default defineComponent({
   beforeUnmount() {
     window.removeEventListener("resize", this.resize);
     EvMgmt.stop("openProject", (prj) => this.openWindow(prj));
-    EvMgmt.listen("closeProject", () => this.closeWindow());
+    EvMgmt.stop("closeProject", () => this.closeWindow());
   }
 });
 </script>

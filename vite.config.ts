@@ -20,4 +20,7 @@ export default defineConfig({
     sourcemap: false,
     cssCodeSplit: false,
   },
+  ssgOptions: {
+    crittersOptions: false,
+  }
 });

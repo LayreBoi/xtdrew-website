@@ -7,6 +7,8 @@ class xtdrew {
 
   public isClosingProject: boolean = false;
 
+  public isClient: boolean = true;
+
   public checkMobile(width: number): void {
     this.isMobile = width < 720;
   }
@@ -78,7 +80,7 @@ class xtdrew {
       lang: "TypeScript",
       cover:
         "https://media.discordapp.net/attachments/812779208338178101/986393366281465916/Kazan3.png?width=400&height=400",
-      link: "https://discord.com/api/oauth2/authorize?client_id=791269900357468200&permissions=1644971949521&scope=bot%20applications.commands",
+      link: "https://xtdrew.xyz/invitekazane",
       linkname: "Invite",
     },
     {

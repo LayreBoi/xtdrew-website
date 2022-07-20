@@ -5,10 +5,10 @@
         <a href="https://www.layre.lol/" target="_blank">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav v-if="!mobile">
-        <a href="#" @click="scroll2Projects()">Projects</a>
+        <a :href="isClient ? '#' : '/#ProjectSection'" @click="scroll2Projects()">Projects</a>
       </xtdrew-nav>
       <xtdrew-logo>
-        <a href="#" @click="scroll2Top()">
+        <a :href="isClient ? '#' : '/#'" @click="scroll2Top()">
           <svg xmlns="http://www.w3.org/2000/svg" width="121.601" height="50.421" viewBox="0 0 121.601 50.421"><path id="Logo" d="M80.573,50.421V7.1H71.688V50.421H63.6V7.1h-7.94L47.542,25.21l10.11,22.557L58.84,50.41h-.005l.005.011H0l.005-.011H0l11.294-25.2L0,.011H.005L0,0H94.645Q121.6,0,121.6,24.577q0,11.673-7.478,18.758T94.068,50.42Zm8.056-7.067h6.458q8.532,0,13.273-4.852T113.1,24.788Q113.1,7.1,95.393,7.1H88.629ZM24.045,22.686l.769,1.686v1.676l-.793,1.738L17.093,43.072h24.65L34.026,26.048V24.372L41.742,7.348H17.093Z" /></svg>
         </a>
       </xtdrew-logo>
@@ -45,6 +45,7 @@ export default defineComponent({
   data() {
     return {
       mobile: false,
+      isClient: xtdrew.isClient,
     };
   },
   methods: {

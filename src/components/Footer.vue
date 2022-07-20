@@ -10,6 +10,7 @@
           >GitHub</a
         >
         <span style="color: var(--color-yellow)" v-html="devfoot"></span>
+        <span style="color: var(--color-red)"><noscript> // This site works best with JS enabled!</noscript></span>
       </xtdrew-f>
     </xtdrew-text>
   </xtdrew-footer>
