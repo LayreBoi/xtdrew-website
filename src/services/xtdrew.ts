@@ -88,7 +88,7 @@ class xtdrew {
       description: [
         "I really wanted to have an email with a domain of my own, but I also wanna keep the email security and chose a boomer TLD (.com).",
         "",
-        "My older emails were contact@layreboi.me and contact@xtdrew.xyz, now they forward newer message to my new email. I recommend contacting me with my latest email (layreboi@mailayre.com)."
+        "My older emails were contact@layreboi.me and contact@xtdrew.xyz, now they forward newer messages to my new email. I recommend contacting me with my latest email (layreboi@mailayre.com)."
       ],
       type: "Email",
       lang: "TypeScript (Website)",
