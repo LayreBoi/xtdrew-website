@@ -7,7 +7,7 @@
 ##### Why did you change your website?
 I thought of redesigning it, this time with prototyping, cuz I usually straight up code it.
 ##### Are you gonna do the same to the LayreBoi website?
-No, I don't plan to do that currently.
+No, I don't plan to do that, as I have already finished the update.
 ##### Where's the old website?
 The old website is now in `legacy.xtdrew.xyz` and keeps its [open source repository](https://github.com/layreboi/xthedrew-website).
 
@@ -52,4 +52,4 @@ To run the website in development mode, run this command in your terminal:
 - **Programmer & designer:** xtdrew/LayreBoi
 
 ---------------------
-###### XTDREW README UPDATED 07/06/2022
+###### XTDREW README UPDATED 09/29/2022
