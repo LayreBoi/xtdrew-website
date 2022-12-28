@@ -45,28 +45,29 @@ class xtdrew {
     {
       name: "LayreBoi Next",
       description: [
-        "LayreBoi NΞXT is a future update for my LayreBoi website. It's still beta, but has some new features!",
-        "Once I'm satisfied with the result of my website, I'll redirect this website to \"layreboi.me\".",
+        "LayreBoi NΞXT is a future update for my LayreBoi website. It has a new cleaner UI and new features like release downloads!",
+        "(My legacy website is no longer maintained, but keeps its hosting service, now with the domain \"legacy.layreboi.me\")"
       ],
       type: "Website",
       lang: "Vue-TS",
       cover: `https://media.discordapp.net/attachments/833015294313496616/943253434952482867/Untitled171_20220215221041.png?width=400&height=400`,
-      link: "https://next.layreboi.me",
+      link: "https://layreboi.me",
       linkname: "Website",
     },
-    {
-      name: "LAYRE.LOL Linktree",
-      description: [
-        "LΛYRΞ.LOL Linktree is a website where you can find me in any social media like YouTube, Twitter, Instagram, etc.",
-        "(You can also visit this website by clicking on \"Socials\" in the navigation above)"
-      ],
-      type: "Website",
-      lang: "Vue-TS",
-      cover:
-        "https://media.discordapp.net/attachments/833015294313496616/980251649664761876/unknown.png?width=400&height=400",
-      link: "https://www.layre.lol",
-      linkname: "Linktree",
-    },
+// LAYRE.LOL is no longer maintained
+//     {
+//       name: "LAYRE.LOL Linktree",
+//       description: [
+//         "LΛYRΞ.LOL Linktree is a website where you can find me in any social media like YouTube, Twitter, Instagram, etc.",
+//         "(You can also visit this website by clicking on \"Socials\" in the navigation above)"
+//       ],
+//       type: "Website",
+//       lang: "Vue-TS",
+//       cover:
+//         "https://media.discordapp.net/attachments/833015294313496616/980251649664761876/unknown.png?width=400&height=400",
+//       link: "https://www.layre.lol",
+//       linkname: "Linktree",
+//     },
     {
       name: "Kazan3",
       description: [
@@ -86,12 +87,11 @@ class xtdrew {
     {
       name: "MaiLayre",
       description: [
-        "I really wanted to have an email with a domain of my own, but I also wanna keep the email security and chose a boomer TLD (.com).",
-        "",
-        "My older emails were contact@layreboi.me and contact@xtdrew.xyz, now they forward newer messages to my new email. I recommend contacting me with my latest email (layreboi@mailayre.com)."
+        "This websites contains information about me and my social media links.",
+        "This is also the domain of my current contact email address (layreboi@mailayre.com). Older contact email addresses forward to my current one."
       ],
-      type: "Email",
-      lang: "TypeScript (Website)",
+      type: "Website & Email",
+      lang: "Vue-TS (Website)",
       cover: "https://media.discordapp.net/attachments/812779208338178101/996942917597937734/Icon.png?width=400&height=400",
       link: [
         {
