@@ -2,7 +2,7 @@
   <xtdrew-header>
     <xtdrew-desktop>
       <xtdrew-nav v-if="!mobile" class="layrelol">
-        <a href="https://www.layre.lol/" target="_blank">Socials</a>
+        <a href="https://mailayre.com/links/" target="_blank">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav v-if="!mobile">
         <a :href="isClient ? '#' : '/#ProjectSection'" @click="scroll2Projects()">Projects</a>
@@ -265,7 +265,7 @@ xtdrew-header {
               left: 0;
               width: 100%;
               height: 100%;
-              background: linear-gradient(95deg, #4b279b, #df99d8);
+              background: linear-gradient(180deg, #e198ff, #9fe8ff);
               z-index: -1;
               transition: opacity 0.25s ease;
               opacity: 0;
