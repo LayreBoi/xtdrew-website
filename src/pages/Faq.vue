@@ -167,7 +167,8 @@ const FAQ: Question[] = [
   {
     question: "What computer do you have?",
     answer:
-      "I have a desktop PC and a laptop. My PC is slower and has very old components, but has a more powerful graphics processor than my laptop. I think of buying a new PC once I get enough money.",
+      // "I have a desktop PC and a laptop. My PC is slower and has very old components, but has a more powerful graphics processor than my laptop. I think of buying a new PC once I get enough money.",
+      "I own both a desktop and a laptop. My desktop has a powerful processor, AMD Ryzen 7 5800X, and GPU, Gigabyte GeForce RTX 3060 Gaming OC. It also has 32 GB of DDR4 RAM.",
   },
 ];
 </script>
