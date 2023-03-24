@@ -148,7 +148,9 @@ const FAQ: Question[] = [
   {
     question: "When did you start programming?",
     answer:
-      "I started programming at around 2018 or so. YouTube somehow recommended me on how make a custom login screen with HTML and CSS, and this is where my interest in coding started.",
+      // "I started programming at around 2018 or so. YouTube somehow recommended me on how make a custom login screen with HTML and CSS, and this is where my interest in coding started.",
+      // I rember more of my lore
+      "I could explain a loooooong plot, but I'll try explaining it short. In 2017, a few months after I've got my first laptop, I started with batch, then a tutorial about login form in HTML and CSS appeared in my yt recommended and I became interested. After LayreBoi, I've started with Discord bot development in Python, then switched over to TypeScript, and then I learned making websites with Vue.",
   },
   {
     question: "Why do you program and develop apps?",
