@@ -1,0 +1,20 @@
+{
+  "name": "MaiLayre",
+  "description": [
+    "This websites contains information about me and my social media links.",
+    "This is also the domain of my current contact email address (layreboi@mailayre.com). Older contact email addresses forward to my current one."
+  ],
+  "type": "Website & Email",
+  "lang": "Vue-TS (Website)",
+  "cover": "https://media.discordapp.net/attachments/812779208338178101/996942917597937734/Icon.png?width=400&height=400",
+  "link": [
+    {
+      "link": "https://mailayre.com",
+      "name": "Website"
+    },
+    {
+      "link": "mailto:layreboi@mailayre.com",
+      "name": "Email"
+    }
+  ]
+}

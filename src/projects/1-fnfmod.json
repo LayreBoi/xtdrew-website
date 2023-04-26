@@ -1,0 +1,15 @@
+{
+  "name": "Friday Night Funkin' Gemashy",
+  "description": [
+    "FNF Gemashy is a mod including a new week and my robot character \"Gemashy\". The mod is currently in development, but has a demo as a Psych Engine port available to download.",
+    "",
+    "This mod contains 4 songs. The fourth song will have a mysterious robot ready to battle you."
+  ],
+  "type": "Mod",
+  "lang": "Haxe",
+  "cover":
+    "https://media.discordapp.net/attachments/887007337284526110/896024167827271760/Untitled108_20210924014714.png?width=400&height=400",
+  "link": "https://gamejolt.com/games/gemashy/647186",
+  "started": "September 2021",
+  "linkname": "GameJolt"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Kazan3",
+  "description": [
+    "Kazan3 (or Kazane) is an entertainment purpose Discord bot programmed in Typescript. She lives in a virtual world and likes to interact with people.",
+    "",
+    "Please note that this bot can appear as unstable sometimes when I experiment with the bot. If that happens, wait until it's fixed, or contect me.",
+    "",
+    "You can <a href=\"https://discord.gg/rr37RqZpeZ\">join my Discord server</a> to know more about her."
+  ],
+  "type": "Discord Bot",
+  "lang": "TypeScript",
+  "cover":
+    "https://media.discordapp.net/attachments/812779208338178101/986393366281465916/Kazan3.png?width=400&height=400",
+  "link": "https://xtdrew.xyz/invitekazane",
+  "linkname": "Invite"
+}

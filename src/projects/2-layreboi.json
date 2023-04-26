@@ -1,0 +1,12 @@
+{
+  "name": "LayreBoi Next",
+  "description": [
+    "LayreBoi NΞXT is a future update for my LayreBoi website. It has a new cleaner UI and new features like release downloads!",
+    "(My legacy website is no longer maintained, but keeps its hosting service, now with the domain \"legacy.layreboi.me\")"
+  ],
+  "type": "Website",
+  "lang": "Vue-TS",
+  "cover": "https://media.discordapp.net/attachments/833015294313496616/943253434952482867/Untitled171_20220215221041.png?width=400&height=400",
+  "link": "https://layreboi.me",
+  "linkname": "Website"
+}
