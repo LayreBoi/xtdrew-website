@@ -18,7 +18,7 @@
       </xtdrew-title>
       <xtdrew-p>
         Email: <a href="mailto:layreboi@mailayre.com" target="_blank">layreboi@mailayre.com</a>
-        <br />Discord: LayreBoi_xthedrew#7646
+        <br />Discord: layreboi
       </xtdrew-p>
     </xtdrew-conts>
   </xtdrew-section>
