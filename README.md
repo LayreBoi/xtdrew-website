@@ -6,8 +6,10 @@
 ### FAQ - Website rewrite
 ##### Why did you change your website?
 I thought of redesigning it, this time with prototyping, cuz I usually straight up code it.
+<!---
 ##### Are you gonna do the same to the LayreBoi website?
 No, I don't plan to do that, as I have already finished the update.
+-->
 ##### Where's the old website?
 The old website is now in `legacy.xtdrew.xyz` and keeps its [open source repository](https://github.com/layreboi/xthedrew-website).
 
@@ -35,21 +37,27 @@ If you'd like to contribute to my website to fix some issues or make some sugges
 ### Developing
 To work on this website, you'll need NodeJS 12 or higher. First, download the source code to your computer and extract it wherever you want. Then open your terminal (or command prompt/powershell) in the folder you've extracted to and enter the command:
 
-> npm i
+> ```sh
+> $ npm i
+> ```
 
 or 
 
-> npm install
+> ```sh
+> $ npm install
+> ```
 
 --------------------
 ### Running while developing
 To run the website in development mode, run this command in your terminal:
 
-> npm run dev
+> ```sh
+> $ npm run dev
+> ```
 
 --------------------
 ### Credits
 - **Programmer & designer:** xtdrew/LayreBoi
 
 ---------------------
-###### XTDREW README UPDATED 09/29/2022
+###### XTDREW README UPDATED 08/17/2023
