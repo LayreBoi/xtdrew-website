@@ -98,6 +98,7 @@ xtdrew-dimbackground {
     flex-direction: column;
     background-color: var(--xtdrew-project-bg);
     width: calc(85% - 40px);
+    max-width: 1200px;
     height: calc(85% - 60px);
     transition: all 0.25s ease;
 

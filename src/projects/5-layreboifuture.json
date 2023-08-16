@@ -1,0 +1,13 @@
+{
+  "name": "LayreBoi future",
+  "description": [
+    "I have a dream to build a network where I can experiment around at home. This project is to rewrite my website, but more scalable and organized, plus a refresh.",
+    "Once the project is complete and ready to be deployed, \"legacy.layreboi.me\" will be replaced with NΞXT version, which will be the final goodbye. NΞXT won't last as long as the first version tho."
+  ],
+  "type": "Website",
+  "lang": "Vue-TS",
+  "cover": "https://media.discordapp.net/attachments/833015294313496616/1141497479142060102/ProjectIcon.png?width=400&height=400",
+  "link": "",
+  "linkname": "Coming soon",
+  "started": "July 2023"
+}

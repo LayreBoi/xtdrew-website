@@ -78,11 +78,13 @@ xtdrew-faq {
       text-align: center;
       align-items: center;
       width: 80%;
+      max-width: 1280px;
       transition: all 0.25s ease;
 
       @media screen and (max-width: 720px) {
         & {
           width: 95%;
+          max-width: initial;
         }
       }
 

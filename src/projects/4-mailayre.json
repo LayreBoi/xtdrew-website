@@ -1,8 +1,7 @@
 {
   "name": "MaiLayre",
   "description": [
-    "This websites contains information about me and my social media links.",
-    "This is also the domain of my current contact email address (layreboi@mailayre.com). Older contact email addresses forward to my current one."
+    "This website is used kind of as a portfolio for me and includes the social links. This is also where the domain from my email, \"mailayre.com\", comes from."
   ],
   "type": "Website & Email",
   "lang": "Vue-TS (Website)",
@@ -16,5 +15,6 @@
       "link": "mailto:layreboi@mailayre.com",
       "name": "Email"
     }
-  ]
+  ],
+  "started": "December 2022"
 }
