@@ -18,7 +18,7 @@
       <p>
         xtdrew (or xthedrew) is a programmer from Austria, developing
         applications such as websites and bots.
-        <br />He developed several web applications such as LayreBoi, Layre.LOL,
+        <br />He developed several web applications such as LayreBoi, MaiLayre,
         and discord bots such as Kazan3, Amih1ri, Lillie and Amber.
         <br /><br />As a programmer, his goal is to create things to learn about
         his future self.
