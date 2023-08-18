@@ -2,7 +2,7 @@
   "name": "LayreBoi future",
   "description": [
     "I have a dream to build a network where I can experiment around at home. This project is to rewrite my website, but more scalable and organized, plus a refresh.",
-    "Once the project is complete and ready to be deployed, \"legacy.layreboi.me\" will be replaced with NΞXT version, which will be the final goodbye. NΞXT won't last as long as the first version tho."
+    "Once the project is complete and ready to be deployed, \"legacy.layreboi.me\" will be replaced with NΞXT version, which will be a goodbye for the old version. NΞXT won't last as long as the old version tho."
   ],
   "type": "Website",
   "lang": "Vue-TS",
