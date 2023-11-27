@@ -21,7 +21,7 @@
     </xtdrew-desktop>
     <xtdrew-mobile v-if="mobile">
       <xtdrew-nav class="layrelol">
-        <a href="https://www.layre.lol/" target="_blank">Socials</a>
+        <a href="https://mailayre.com/links" target="_blank">Socials</a>
       </xtdrew-nav>
       <xtdrew-nav>
         <a href="#" @click="scroll2Projects()">Projects</a>
